@@ -7,7 +7,7 @@ def main(page: Page):
     etiquetas = []
 
     for e in lenguajes:
-        etiquetas.append(Text(e))
+        etiquetas.append(Text(value=e, size= 30, weight= flet.FontWeight.BOLD, color= flet.colors.AMBER_ACCENT, bgcolor= flet.colors.PINK))
 
     row_datos = Row(controls=etiquetas)
 
