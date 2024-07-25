@@ -21,4 +21,4 @@ def main(page: Page):
 
 
 # Ejecución en modo Web:
-flet.app(target=main, view=flet.WEB_BROWSER)
+flet.app(target=main, view=flet.AppView.WEB_BROWSER)

@@ -13,6 +13,7 @@ def main(page: Page):
     btn_submit = ElevatedButton(text='Submit', on_click=submit_clicked)
 
     cbx_color = Dropdown(
+        value= 'Rojo', 
         width=100,
         options= [
             dropdown.Option('Rojo'),
