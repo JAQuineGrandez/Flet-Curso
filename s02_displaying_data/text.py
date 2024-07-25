@@ -6,9 +6,9 @@ def main(page: Page):
     lbl_texto = Text(
         value='¡Flet y Python!',
         size=30,
-        color='green',
-        bgcolor='black',
-        weight='bold',
+        color= flet.colors.GREEN, #'green'
+        bgcolor= flet.colors.BLACK, #'black'
+        weight= flet.FontWeight.BOLD, #'bold'
         italic=True
     )
 
