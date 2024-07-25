@@ -14,6 +14,8 @@ def main(page: Page):
 
         txt_first_name.current.value = ''
         txt_last_name.current.value = ''
+        btn_saludar.current.data += 1
+        btn_saludar.current.text = str(btn_saludar.current.data)
 
         page.update()
         txt_first_name.current.focus()
@@ -22,7 +24,7 @@ def main(page: Page):
     page.add(
         TextField(ref=txt_first_name, label='Nombre', autofocus=True),
         TextField(ref=txt_last_name, label='Apellido'),
-        ElevatedButton(ref = btn_saludar, text= "Saludar", on_click= saludar_clicked),
+        ElevatedButton(ref = btn_saludar, text= "Saludar", on_click= saludar_clicked, data= 1),
         Column(ref=col_controles)
     )
 
