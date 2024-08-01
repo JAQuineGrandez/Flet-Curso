@@ -25,4 +25,5 @@ def main(page: Page):
     page.add(cbx_color, btn_submit, lbl_resultado)
 
 
-flet.app(target=main)
+#flet.app(target=main)
+flet.app(target=main, view=flet.WEB_BROWSER)

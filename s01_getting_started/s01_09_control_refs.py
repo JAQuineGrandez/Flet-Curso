@@ -3,9 +3,25 @@ from flet import Column, ElevatedButton, Page, Text, TextField
 
 
 def main(page: Page):
-    txt_first_name = TextField(label='Nombre', autofocus=True)
-    txt_last_name = TextField(label='Apellido')
+    
+    def submit_firstname(event):
+        if not txt_first_name.value :
+            txt_first_name.focus()
+            return
+        
+        txt_last_name.focus()
+        
+    def submit_lastname(event):
+        if not txt_last_name.value :
+            txt_last_name.focus()
+            return
+        
+        btn_saludar.focus()
+    
+    txt_first_name = TextField(label='Nombre', autofocus=True, on_submit= submit_firstname)
+    txt_last_name = TextField(label='Apellido', on_submit= submit_lastname)
     col_controles = Column()
+    
 
     def saludar_clicked(event):
         col_controles.controls.append(Text(f'¡Hola, {txt_first_name.value} {txt_last_name.value}!'))
